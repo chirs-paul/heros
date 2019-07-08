@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <AppHeader></AppHeader> -->
+    <app-header></app-header>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- <AppSilder></AppSilder> -->
+        <app-silder></app-silder>
+
+        <!-- <AppList></AppList> -->
+        <!-- <app-list></app-list> -->
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// ES6中的模块化的语法，导入模块
+// import HelloWorld from './components/HelloWorld.vue'
 
+//1.导入组件
+// import HeroList from "./components/HeroList.vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppSilder from "./components/AppSilder.vue";
+// import AppList from "./components/AppList.vue";
+
+// export default {
+//   name: "app",
+//   //2.注册局部组件
+//   components: {
+//     HeroList
+//   }
+// };
 export default {
-  name: 'app',
+  name: "app",
+  //2.注册局部组件
   components: {
-    HelloWorld
+    AppHeader,
+    AppSilder
+    // AppList
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
