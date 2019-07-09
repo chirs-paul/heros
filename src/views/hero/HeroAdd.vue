@@ -33,7 +33,7 @@
 // 1. 绑定文本框(下拉框)  ✔️
 // 2. 点击按钮发送请求，添加 ✔️
 // 3. 添加成功，跳转回列表 ✔️
-import axios from "axios";
+// import axios from "axios";
 export default {
   data() {
     return {
@@ -47,7 +47,7 @@ export default {
   methods: {
     // 点击按钮发送请求，添加
     add() {
-      axios
+      this.axios
         .post("http://localhost:3000/heroes", this.formData)
         .then(response => {
           const status = response.status;

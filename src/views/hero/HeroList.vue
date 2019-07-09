@@ -36,7 +36,7 @@
 <script>
 // 1. 英雄列表
 // 1.1  发送请求，获取数据 ✔️
-import axios from 'axios'
+// import axios from 'axios'
 
 // 1.2  渲染列表 ✔️
 export default {
@@ -53,7 +53,7 @@ export default {
     methods: {
       // 加载数据的方法
       loadData(){
-        axios
+        this.axios
           .get(' http://localhost:3000/heroes')
           .then((response) =>{
             //  console.log(response);
@@ -77,7 +77,7 @@ export default {
             return false
         }
         // 2. 发送请求，删除
-        axios
+        this.axios
           .delete(` http://localhost:3000/heroes/${id}`)
           .then((response)=>{
               const status = response.status

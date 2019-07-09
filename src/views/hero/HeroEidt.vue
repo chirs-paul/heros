@@ -32,7 +32,7 @@
 
 // 路由规则设置props: true，路由自动把id数据传递给组件
 // 组件中接收 props: ['id']
-import axios from "axios";
+// import axios from "axios";
 export default {
   props: ["id"],
   data() {
@@ -51,7 +51,7 @@ export default {
   methods: {
     // 根据id获取数据
     getDataById() {
-      axios.get(`http://localhost:3000/heroes/${this.id}`).then(response => {
+      this.axios.get(`http://localhost:3000/heroes/${this.id}`).then(response => {
         const { data, status } = response;
         if (status === 200) {
           this.formData = data;
@@ -62,7 +62,7 @@ export default {
     },
     // 实现修改功能
     getEidt() {
-      axios
+      this.axios
         .put(`http://localhost:3000/heroes/${this.id}`, this.formData)
         .then(response => {
           const status = response.status;

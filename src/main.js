@@ -7,6 +7,9 @@ import Vue from 'vue'
 //导入根组件
 import App from './App.vue'
 
+import axios from 'axios'
+Vue.prototype.axios = axios
+
 //引入外部样式
 // import './xxx/index.css'
 import './assets/bootstrap/css/bootstrap.css'
