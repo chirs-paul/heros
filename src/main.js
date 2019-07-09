@@ -12,7 +12,7 @@ import App from './App.vue'
 import './assets/bootstrap/css/bootstrap.css'
 import './assets/css/index.css'
 
-
+// 导入router模块
 import router from './router.js'
 
 // 提示当前处在开发模式, false 不提示
